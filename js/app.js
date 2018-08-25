@@ -33,6 +33,7 @@ function guess() {
             $('.score span').text(score); //setting score to 0
 
 
+    }
         game();
 }
 
