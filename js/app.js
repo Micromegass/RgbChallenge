@@ -1,30 +1,41 @@
 
+var correct;
+var score = 0;
 
-var correct = Math.floor(Math.random() * 2)
+//initialize game
+game();
+//click for circles
+$('.option').on('click', guess);
 
-$('.option').on('click', function() {
+function game() {
+    correct = Math.floor(Math.random() * 2);
 
-    var index = ($('.option').index(this))
+    $('.option').each(function(index) {
+        var color = generateColor();
+        $(this).css('background-color', color);
 
-    if (index == correct) {
+        if (index == correct) {
+            $('.question').text(color);
+        }
+    });
+}
 
-        alert('awesome!!');
-    }
-    else
+function guess() {
+    var index = $('.option').index(this);
+        if (index == correct) {
+            alert('awesome!!');
+            score++;
+           $('.score span').text(score); //adding to score if correct
 
-      alert('moron');
+        } else {
+            alert('moron');
+            score = 0; 
+            $('.score span').text(score); //setting score to 0
 
-});
 
+        game();
+}
 
-$('.option').each(function(index) {
-    var color = generateColor;
-    $(this).css('background-color', color);
-
-    if (index == correct) {
-        $('.question').text(color);
-    }
-});
 
 
 function generateColor() {
