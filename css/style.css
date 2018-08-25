@@ -9,6 +9,26 @@ body  {
     text-align: center;
 }
 
+
+.score {
+
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+.question-container {
+    position: absolute;
+    top:40%;
+    width: 100%;
+
+}
+
+
+.question {
+
+    font-size: 28px; 
+}
+
 .option {
 
     display: inline-block;
@@ -17,5 +37,5 @@ body  {
     height: 50px;
     border-radius: 50%;
     cursor: pointer; 
-
+    margin: 20px 10px;
 }
