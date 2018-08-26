@@ -22,19 +22,21 @@ function game() {
 
 function guess() {
     $(this).addClass('scale');
+    
     var index = $('.option').index(this);
         if (index == correct) {
-            alert('awesome!!');
+            $('.result.won').show();
             score++;
-           $('.score span').text(score); //adding to score if correct
 
         } else {
-            alert('moron');
+            $('.result.lost').show();
+
             score = 0; 
-            $('.score span').text(score); //setting score to 0
 
 
     }
+        $('.score span').text(score); //adding to score if correct
+
         game();
 }
 
