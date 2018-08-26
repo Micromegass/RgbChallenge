@@ -1,7 +1,3 @@
-
-
-
-
 body  {
     font-family: 'Inconsolata', monospace;
     background-color: #303030;
@@ -38,4 +34,12 @@ body  {
     border-radius: 50%;
     cursor: pointer; 
     margin: 20px 10px;
+    transition: all 0.45s ease;
+}
+
+
+
+.option.scale {
+
+    transform: scale(46);
 }
