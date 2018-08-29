@@ -13,7 +13,6 @@ $('.close a').on('click', function() {
     game();
 });
 
-
 function game() {
     correct = Math.floor(Math.random() * 2);
 
@@ -45,8 +44,6 @@ function guess() {
         $('.score span').text(score); //adding to score if correct
 
 }
-
-
 
 function generateColor() {
     return 'rgb(' + random() + ', ' + random() + ', ' + random() + ')'; 
