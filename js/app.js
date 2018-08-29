@@ -4,8 +4,15 @@ var score = 0;
 
 //initialize game
 game();
+
 //click for circles
 $('.option').on('click', guess);
+$('.close a').on('click', function() {
+    $('.result').hide();
+    $('.option').removeClass('scale');
+    game();
+});
+
 
 function game() {
     correct = Math.floor(Math.random() * 2);
@@ -37,7 +44,6 @@ function guess() {
     }
         $('.score span').text(score); //adding to score if correct
 
-        game();
 }
 
 
